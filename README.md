@@ -11,7 +11,9 @@ A real-time analytics dashboard for quantitative traders. The system streams liv
 ---
 
 ## 🛠️ Architecture
+
 <img width="1514" height="85" alt="image" src="https://github.com/user-attachments/assets/b45304a4-2a6b-4764-9696-5e920225de6e" />
+
 
 ### Data Ingestion
 
