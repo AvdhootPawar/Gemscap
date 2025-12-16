@@ -1,6 +1,3 @@
-Here is a **short, clean, and precise `README.md`** with proper `#` headings, ready to **copy-paste directly**:
-
----
 
 #  Real-Time Quant Analytics Dashboard
 
