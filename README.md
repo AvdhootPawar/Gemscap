@@ -2,15 +2,15 @@ Here is a **short, clean, and precise `README.md`** with proper `#` headings, re
 
 ---
 
-# 📈 Real-Time Quant Analytics Dashboard
+#  Real-Time Quant Analytics Dashboard
 
-## 📌 Overview
+##  Overview
 
 A real-time analytics dashboard for quantitative traders. The system streams live **Binance Futures** tick data via WebSockets, resamples it into multiple timeframes, and computes key **statistical arbitrage metrics** for monitoring market dynamics.
 
 ---
 
-## 🛠️ Architecture
+##  Architecture
 
 <img width="1514" height="85" alt="image" src="https://github.com/user-attachments/assets/b45304a4-2a6b-4764-9696-5e920225de6e" />
 
@@ -35,7 +35,7 @@ A real-time analytics dashboard for quantitative traders. The system streams liv
 
 ---
 
-## 📊 Features
+##  Features
 
 * Real-time interactive charts (Plotly)
 * Customizable symbols, timeframes, and rolling windows
@@ -44,7 +44,7 @@ A real-time analytics dashboard for quantitative traders. The system streams liv
 
 ---
 
-## 🚀 Setup
+##  Setup
 
 ### Requirements
 
@@ -64,7 +64,7 @@ streamlit run your_filename.py
 
 ---
 
-## 🏗️ System Flow
+##  System Flow
 
 **WebSocket → TickStore → Resampling → Quant Analytics → Streamlit UI**
 
@@ -72,7 +72,7 @@ streamlit run your_filename.py
 
 ---
 
-## 🤖 AI Usage
+##  AI Usage
 
 * **Tool**: ChatGPT/Gemini
 * **Used For**:
