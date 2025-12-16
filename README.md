@@ -71,13 +71,11 @@ streamlit run your_filename.py
 
 ## 🤖 AI Usage
 
-* **Tool**: ChatGPT
+* **Tool**: ChatGPT/Gemini
 * **Used For**:
 
   * Thread-safe TickStore design
   * Optimizing ADF test integration
   * Streamlit layout structuring
 
----
 
-If you want an **ultra-minimal version**, **badges**, or a **quant-research style README**, I can do that too.
