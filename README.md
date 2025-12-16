@@ -1,87 +1,83 @@
-📈 Real-Time Quant Analytics Dashboard
-📌 Project Overview
-This application is a complete analytical suite designed for quantitative traders to monitor and analyze real-time market dynamics. It ingests live tick data from Binance Futures via WebSockets, processes it into selectable timeframes, and computes key statistical arbitrage metrics such as hedge ratios, spreads, and stationarity tests.
+Here is a **short, clean, and precise `README.md`** with proper `#` headings, ready to **copy-paste directly**:
 
+---
 
+# 📈 Real-Time Quant Analytics Dashboard
 
-🛠️ Methodology & Architecture
-The system follows a modular design to ensure high performance and future extensibility.
+## 📌 Overview
 
+A real-time analytics dashboard for quantitative traders. The system streams live **Binance Futures** tick data via WebSockets, resamples it into multiple timeframes, and computes key **statistical arbitrage metrics** for monitoring market dynamics.
 
+---
 
+## 🛠️ Architecture
 
-Data Ingestion: A multi-threaded BinanceWebSocket class manages persistent connections to Binance. It uses a deque buffer to handle high-frequency tick data (timestamp, symbol, price, qty) without blocking the main UI.
+### Data Ingestion
 
+* Multi-threaded Binance WebSocket connection
+* Non-blocking tick buffer using `deque`
+* Captures timestamp, symbol, price, and quantity
 
-Data Handling & Storage: The TickStore class provides a centralized in-memory database that supports dynamic resampling into 1s, 1m, and 5m intervals.
+### Data Storage
 
-Quantitative Analytics:
+* Centralized in-memory `TickStore`
+* Supports resampling to **1s / 1m / 5m** intervals
 
+### Analytics
 
-Hedge Ratio: Calculated using OLS regression to determine the relationship between two assets.
+* **Hedge Ratio**: OLS regression
+* **Spread & Z-Score**: Mean-reversion detection
+* **ADF Test**: Spread stationarity check
+* **Rolling Correlation**: Dynamic asset relationship tracking
 
+---
 
+## 📊 Features
 
-Spread & Z-Score: Monitors price deviations to identify mean-reversion opportunities.
+* Real-time interactive charts (Plotly)
+* Customizable symbols, timeframes, and rolling windows
+* Live Z-score alerts (e.g. |Z| > 2.0)
+* One-click CSV data export
 
+---
 
+## 🚀 Setup
 
-ADF Test: An integrated Augmented Dickey-Fuller test to check for spread stationarity.
+### Requirements
 
+* Python **3.8+**
 
+### Install Dependencies
 
-Rolling Correlation: Tracks how closely assets move together over a sliding window.
-
-🚀 Setup & Execution
-Prerequisites: Python 3.8 or higher.
-
-Install Dependencies:
-
-Bash
-
+```bash
 pip install streamlit pandas numpy statsmodels plotly websocket-client
-Run the Application:
+```
 
-Bash
+### Run
 
+```bash
 streamlit run your_filename.py
+```
 
-The app will automatically begin streaming live data upon startup.
+---
 
-📊 Key Features
+## 🏗️ System Flow
 
-Interactive Dashboards: Real-time price charts and statistical plots (Spread, Z-Score, Correlation) built with Plotly for zoom and pan support.
+**WebSocket → TickStore → Resampling → Quant Analytics → Streamlit UI**
 
+(Architecture diagram available as `Architecture_Diagram.png`)
 
+---
 
-Customizable Controls: Adjust symbols, timeframes, and rolling windows on the fly.
+## 🤖 AI Usage
 
+* **Tool**: ChatGPT
+* **Used For**:
 
-Live Alerting: Visual indicators that trigger when the Z-score breaches user-defined thresholds (e.g., Z > 2.0).
+  * Thread-safe TickStore design
+  * Optimizing ADF test integration
+  * Streamlit layout structuring
 
+---
 
-
-Data Export: A one-click download button to export processed analytics and time-series data as a CSV for further research.
-
-
-🏗️ Architecture Diagram
-The project includes a detailed architecture diagram (found in the repository as Architecture_Diagram.png) illustrating the following flow:
-
-Ingestion Layer: WebSocket Connection → Threaded Buffer.
-
-Storage Layer: TickStore → Resampling Engine.
-
-Analytics Layer: OLS Regression → Statistical Testing.
-
-Presentation Layer: Streamlit UI → Interactive Charts → Alerting System.
-
-🤖 AI Usage Transparency
-
-Tool: [Specify AI used, e.g., ChatGPT/Gemini].
-
-
-
-Usage: Assisted in structuring the thread-safe TickStore class, optimizing the statsmodels ADF test integration, and designing the Streamlit multi-column layout.
-
-
-Prompts Used: "How to run a background websocket thread in Streamlit?", "Calculate rolling OLS hedge ratio in pandas.".
+If you want an **ultra-minimal version**, **badges**, or a **quant-research style README**, I can do that too.
